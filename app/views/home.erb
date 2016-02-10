@@ -1,6 +1,14 @@
 <h1>Welcome to Bookmarks.</h1>
 
-<% @Links.each do |link| %>
-<%= link.url %>
-<%= link.title %>
-<% end %>
+<ul id='links'>
+  <% @Links.each do |link| %>
+    <li>
+      <%= link.url %>
+      <%= link.title %>
+    </li>
+  <% end %>
+</ul>
+
+<form action="/new">
+ <input type="submit" value="Add a link">
+</form>
