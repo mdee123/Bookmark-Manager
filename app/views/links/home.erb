@@ -1,0 +1,24 @@
+<h1>Bookmarks.</h1>
+
+<ul id='links'>
+  <% @links.each do |link| %>
+    <li>
+      <%= link.title %>
+      <%= link.url %>
+      <%= link.tags.map(&:name).join %>
+    </li>
+  <% end %>
+</ul>
+
+
+<!-- <form method="get" action="/tags/name">
+  <label for="filter">
+    Filter by tag
+    <input type="text" name="name"/>
+  </label>
+  <input type="submit" value="Submit"/>
+</form> -->
+
+<form action="/links/new">
+ <input type="submit" value="Add a link">
+</form>
